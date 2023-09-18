@@ -1,6 +1,6 @@
 body {
-    margin: 0;
-    padding: 0;
+     padding: 0;
+     margin: 0;
     }
     .DanhMuc{
      margin: 0 160px;
@@ -34,7 +34,7 @@ body {
     }
     .Top-Menu{
          /* Đặt màu nền của khối div thành màu xám */
-      background-color: gray;
+      background-color: rgb(70, 70, 70);
         /* Sắp xếp các phần tử trong khối div theo hàng ngang */
       display: flex;
         /* Căn giữa các phần tử theo chiều ngang */
@@ -94,3 +94,120 @@ body {
       font-size: 18px;
       color: #fffafa;
     }
+    .Iphone{
+        width: auto; /* Chiều rộng tự động */
+        height: 54px; /* Chiều cao 54px */
+        margin: 0 160px; /* Cách lề trái và phải 160px */
+        display: flex; /* Sử dụng flexbox để căn giữa nội dung theo cả hai chiều */
+        align-items: center; /* Căn giữa nội dung theo chiều dọc */
+        justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    }
+
+    #myDiv {
+        width: auto;
+        height: 412px;
+        margin: 0 160px;
+        position: relative;
+        
+      }
+      
+      #myDiv img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        
+      }
+      
+      #myDiv button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        /* Thêm các thuộc tính để tạo nút hình tròn */
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        background-color: rgba(191, 191, 191, 0.5);
+      }
+      
+      #prev {
+        left: 10px; /* Đặt nút "Prev" vào trong khối div */
+      }
+      
+      #next {
+        right: 10px; /* Đặt nút "Next" vào trong khối div */
+      }
+  
+      .footer-all{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        font-family: sans-serif;
+      }
+      .footer{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+        gap: 3.5rem;
+        background-color: rgb(36, 36, 36);
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      section{
+        height: auto;
+        width: auto;
+        padding: 0;
+      }
+      .Logo{
+        font-size: 33px;
+        color: white;
+        font-weight: 700;
+      }
+      span{
+        color: rgb(162, 162, 222);
+      }
+      .footer-content h4{
+       color: white;
+       margin-bottom: 1.5rem;
+       font-size: 20px;
+      }
+      .footer-content li{
+        margin-bottom: 16px;
+      }
+      .footer-content li a{
+        display: block;
+        color: #d6d6d6;
+        font-size: 15px;
+        font-weight: 400;
+        transition: all .40s ease;
+      }
+      .footer-content li a:hover{
+        transform: translateY(-3px) translateX(-5px);
+        color: white;
+      }
+      .footer-content p{
+        color: #d6d6d6;
+        font: 16px;
+        line-height: 30px;
+        margin: 20px 0;
+      }
+      .Icons a{ 
+        display: inline-block;
+        font-size: 25px;
+        color: #d6d6d6;
+        margin-right: 20px;
+        transition: all .40s ease;
+      }
+      .Icons a:hover{
+        color: white;
+        transform: translateY(-5px)
+      }
+      .sent-Email{
+        width: auto;
+        height: 142px;
+        background-color: #d5d5d5;
+      }
+      
+      
