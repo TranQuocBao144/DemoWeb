@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    }
+    .DanhMuc{
+     margin: 0 160px;
+     display: flex;
+     display: grid;
+     grid-template-columns: repeat(4 ,1fr);
+     justify-content: space-between;
+    }
+    .DanhMuc > #picture{   
+      width: 285px;
+      height: 412px;
+      padding: 0 23px;
+      box-sizing: border-box;
+      
+    }
+    .DanhMuc > #picture > img{
+      width: 100%;
+      height: auto;
+    }
+    #NewPrice{
+      color:rgb(54, 54, 251);
+      width: 83px;
+      height: 23px;
+      font-size: large;  
+    }
+    #TEnSP{
+      color: rgb(12, 9, 9);
+      width: 245px;
+      height: 27px;
+      font-size:large;
+    }
+    .Top-Menu{
+         /* Đặt màu nền của khối div thành màu xám */
+      background-color: gray;
+        /* Sắp xếp các phần tử trong khối div theo hàng ngang */
+      display: flex;
+        /* Căn giữa các phần tử theo chiều ngang */
+      justify-content: space-between;
+        /* Căn giữa các phần tử theo chiều dọc */
+      align-items: center;
+        /* Đặt padding cho khối div, padding trái và phải là 160px, padding trên và dưới là 0 */
+      padding: 0 160px;
+    }
+    #Menu{
+       /* Chiều cao của thẻ nav là 64px */
+      height: 64px;
+       /* Cho phép thẻ nav mở rộng để chiếm toàn bộ không gian còn lại trong khối div */
+      flex-grow: 1;
+    }
+    #Menu>ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    #Menu>ul>li{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      margin-right: 10px;
+      height: 64px;
+    }
+    .header1{
+      padding-right: 10px;
+    }
+    .header1 img{
+      height: 45px;
+      width: 175px;
+      box-sizing: border-box;
+    }
+    .header2>#language{
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+    .header2>#language div{
+      margin-right: 10px;
+    }
+    #search{
+      font-size: 20px;
+      color: #fffafa;
+    
+    }
+    #cart{
+      font-size: 20px;
+      color: #fffafa;
+    }
+    #User-icon{
+      font-size: 18px;
+      color: #fffafa;
+    }
