@@ -105,7 +105,7 @@ body {
 
     #myDiv {
         width: auto;
-        height: 412px;
+        height: 437px;
         margin: 0 160px;
         position: relative;
         
@@ -113,7 +113,7 @@ body {
       
       #myDiv img {
         width: 100%;
-        height: 100%;
+        height: 95%;
         position: absolute;
         
       }
@@ -138,76 +138,120 @@ body {
       #next {
         right: 10px; /* Đặt nút "Next" vào trong khối div */
       }
-  
-      .footer-all{
-        padding: 0;
-        margin: 0;
-        text-decoration: none;
-        list-style: none;
-        font-family: sans-serif;
+      .sent-Email{
+        width: 100%;
+        height: 142px;
+        margin: auto;
+        background-color: #f2f2f2;
+        padding: 50px 0 50px 0;
       }
-      .footer{
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(200px,auto));
-        gap: 3.5rem;
-        background-color: rgb(36, 36, 36);
-        left: 0;
-        right: 0;
-        bottom: 0;
+      .Input-Email{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 501px;
+        width: 570px;
       }
-      section{
-        height: auto;
-        width: auto;
-        padding: 0;
-      }
-      .Logo{
-        font-size: 33px;
+    
+      .Input-Email input[type="email"] {
+        flex-grow: 1;
+        height: 40px;
+        width: 470px;
+        border-radius: 20px 0 0 20px;
+        border: none;
+        padding: 0 10px;
+        background-color: white;
+     }
+    
+      .Input-Email button {
+        width: 100px;
+        height: 40px;
+        /* Bo tròn góc phải của nút đăng ký */
+        border-radius: 20px 20px 20px 20px;
+        border: none;
+        background-color: blue;
         color: white;
-        font-weight: 700;
-      }
-      span{
-        color: rgb(162, 162, 222);
-      }
-      .footer-content h4{
-       color: white;
-       margin-bottom: 1.5rem;
-       font-size: 20px;
-      }
-      .footer-content li{
-        margin-bottom: 16px;
-      }
-      .footer-content li a{
-        display: block;
-        color: #d6d6d6;
-        font-size: 15px;
+         /* Di chuyển nút đăng ký sang trái 50px để nằm trong thanh nhập email */
+        margin-left: -50px;
+    }
+    
+      .rb-zeplin-selected{
+        text-align: center;
         font-weight: 400;
-        transition: all .40s ease;
+        font-size: 15px;
+        line-height: 24px;
+        text-align: center;
+        color: #515154;
+        padding: 8px 0;
+        margin-top: 0;
+        margin-bottom: 15px;
       }
-      .footer-content li a:hover{
-        transform: translateY(-3px) translateX(-5px);
+      div.heading_newletter{
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        color: #1D1D1F;
+        line-height: 36px;
+      }
+      #call{
+        float:right;
         color: white;
+        align-items: center;
+        height: 28px;
+        width: 240px;
+        box-sizing: border-box;
       }
-      .footer-content p{
+      #main>h3{
+        width: 240px;
+        
+        margin-top: 0;
+        color: white;
+        height: 21px;
+        float: right;
+        box-sizing: border-box;
+        
+      }
+      .div-block2>#main>h3{
+        width: 180px;
+        float: right;
+      }
+      .footer p{
         color: #d6d6d6;
         font: 16px;
         line-height: 30px;
         margin: 20px 0;
       }
-      .Icons a{ 
-        display: inline-block;
-        font-size: 25px;
-        color: #d6d6d6;
-        margin-right: 20px;
-        transition: all .40s ease;
+    
+      .footer {
+        background-color: black;
+        padding: 64px 160px 120px;
+        display: flex;
+        justify-content: space-between;
       }
-      .Icons a:hover{
-        color: white;
-        transform: translateY(-5px)
+      .div-block2>#call{
+        width: 180px;
+        height: 28;
       }
-      .sent-Email{
-        width: auto;
-        height: 142px;
-        background-color: #d5d5d5;
+      .div-block {
+        height: 344px;
+        width: 360px;
       }
+      .div-block1{
+        height: 344px;
+        width: 300px;
+      }
+      .div-block2{
+        width: 240px;
+        height: 344px;
+      }
+      .div-block3{
+        height: 344px;
+        width: 300px;
+      }
+      .Logo{
+        height: 48px;
+        width: 184px;
+        display: flex;
+      }
+
       
       
