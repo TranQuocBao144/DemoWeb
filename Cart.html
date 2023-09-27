@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+            body{
+                padding: 0;
+                margin: 0;
+            }
+            .contener{
+                display: flex;
+                width: 100%;
+                height: auto;
+            }
+            .ouput-sp{
+                width: 70%;
+                display: flex;
+            }
+            .contener div{
+                margin-bottom: 20px;
+                justify-content: space-between;
+                margin: 0 20px;
+            }
+            .item img{
+                width: 100px;
+                height: 100px;
+            }
+            .ouput{
+                width: 30%;
+                float: right;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contener">
+            <div class="ouput-sp">
+                <div class="item" id="item1">
+                    <img src="https://shopdunk.com/images/thumbs/0020317_iphone-15-plus-128gb_240.webp">
+                    <h2>Iphone 15 plus</h2>
+                    <p id="price1">Giá: 2500000</p>
+                    <button id="decrease1">-</button>
+                    <span id="quantity1">0</span>
+                    <button id="increase1">+</button>
+                    <p>Tổng: <span id="total1">0</span></p>
+                </div>
+            
+                <div class="item" id="item2">
+                    <img src="https://shopdunk.com/images/thumbs/0020317_iphone-15-plus-128gb_240.webp">
+                    <h2>Iphone 15 plus</h2>
+                    <p id="price2">Giá: 25000000</p>
+                    <button id="decrease2">-</button>
+                    <span id="quantity2">0</span>
+                    <button id="increase2">+</button>
+                    <p>Tổng: <span id="total2">0</span></p>
+                </div>
+            
+                <div class="item" id="item3">
+                    <img src="https://shopdunk.com/images/thumbs/0020317_iphone-15-plus-128gb_240.webp">
+                    <h2>Iphone 15 plus</h2>
+                    <p id="price3">Giá: 25000000</p>
+                    <button id="decrease3">-</button>
+                    <span id="quantity3">0</span>
+                    <button id="increase3">+</button>
+                    <p>Tổng: <span id="total3">0</span></p>
+                </div>
+            </div>
+            <div class="ouput">
+                <h2>Tổng giá của tất cả sản phẩm: <span id="totalAll">0</span></h2>
+            </div>
+        </div>
+        <script>
+            // Hàm setupItem thiết lập các sự kiện cho mỗi mặt hàng
+            function setupItem(quantityBoxId, decreaseButtonId, increaseButtonId, priceBoxId, totalBoxId) {
+            // Lấy các phần tử HTML
+            var quantityBox = document.getElementById(quantityBoxId);
+            var decreaseButton = document.getElementById(decreaseButtonId);
+            var increaseButton = document.getElementById(increaseButtonId);
+            var priceBox = document.getElementById(priceBoxId);
+            var totalBox = document.getElementById(totalBoxId);
+
+            // Lấy giá của sản phẩm từ ô hiển thị giá và chuyển nó thành số nguyên
+            var price = parseInt(priceBox.innerText.replace('Giá: ', ''), 10);
+
+            // Thêm sự kiện click vào nút giảm
+            decreaseButton.addEventListener('click', function() {
+            // Lấy số lượng hiện tại từ ô hiển thị số lượng và chuyển nó thành số nguyên
+            var quantity = parseInt(quantityBox.innerText, 10);
+            // Nếu số lượng hiện tại lớn hơn 0, giảm nó đi 1 và cập nhật lại ô hiển thị tổng giá tiền
+            if (quantity > 0) {
+            quantityBox.innerText = quantity - 1;
+            totalBox.innerText = (parseInt(totalBox.innerText, 10) - price).toString();
+            // Tính lại tổng giá của tất cả sản phẩm
+            calculateTotal();
+            }
+            });
+
+            // Thêm sự kiện click vào nút tăng
+            increaseButton.addEventListener('click', function() {
+            // Lấy số lượng hiện tại từ ô hiển thị số lượng và chuyển nó thành số nguyên
+            var quantity = parseInt(quantityBox.innerText, 10);
+            // Tăng số lượng lên 1 và cập nhật lại ô hiển thị tổng giá tiền
+            quantityBox.innerText = quantity + 1;
+            totalBox.innerText = (parseInt(totalBox.innerText, 10) + price).toString();
+            // Tính lại tổng giá của tất cả sản phẩm
+            calculateTotal();
+            });
+            }
+
+            // Hàm calculateTotal tính tổng giá của tất cả sản phẩm
+            function calculateTotal() {
+            // Lấy các phần tử HTML
+            var totalBox1 = document.getElementById('total1');
+            var totalBox2 = document.getElementById('total2');
+            var totalBox3 = document.getElementById('total3');
+            var totalAll = document.getElementById('totalAll');
+
+            // Tính tổng giá trị trong các ô 'total'
+            var total = parseInt(totalBox1.innerText, 10) + parseInt(totalBox2.innerText, 10) + parseInt(totalBox3.innerText, 10);
+
+           // Cập nhật tổng giá của tất cả sản phẩm
+           totalAll.innerText = total.toString();
+           }
+
+          // Gọi hàm setupItem cho mỗi mặt hàng
+          setupItem('quantity1', 'decrease1', 'increase1', 'price1', 'total1');
+          setupItem('quantity2', 'decrease2', 'increase2', 'price2', 'total2');
+          setupItem('quantity3', 'decrease3', 'increase3', 'price3', 'total3');
+
+
+        </script>
+        
+    </body>
+    </html>
+    
+
+
+
+
+
